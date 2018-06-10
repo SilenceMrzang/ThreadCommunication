@@ -1,3 +1,5 @@
+package com.joyssom.download;
+
 import android.os.Environment;
 
 import android.text.TextUtils;
@@ -26,6 +28,16 @@ public class DownloadManager {
 
     private static DownloadManager mInstance;
 
+    /**
+     * 设置本地保存路径
+     */
+    public void setDownloadLocalPath(String localPath) throws Exception {
+        File file = new File(localPath);
+        if (!file.exists()) {
+            file.mkdirs();
+        }
+        this.DEFAULT_FILE_DIR = localPath;
+    }
 
     /**
      * 
