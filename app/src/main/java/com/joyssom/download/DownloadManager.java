@@ -11,13 +11,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * 
  * 下载管理器，断点续传
- * 
- * 
- * 
+ *
  * @author Cheny
- * 
  */
 
 public class DownloadManager {
@@ -40,9 +36,7 @@ public class DownloadManager {
     }
 
     /**
-     * 
      * 下载文件
-     * 
      */
 
     public void download(String... urls) {
@@ -62,9 +56,7 @@ public class DownloadManager {
     }
 
     /**
-     * 
      * 通过url获取下载文件的名称
-     * 
      */
 
     public String getFileName(String url) {
@@ -74,9 +66,7 @@ public class DownloadManager {
     }
 
     /**
-     * 
      * 暂停
-     * 
      */
 
     public void pause(String... urls) {
@@ -96,9 +86,7 @@ public class DownloadManager {
     }
 
     /**
-     * 
      * 取消下载
-     * 
      */
 
     public void cancel(String... urls) {
@@ -118,9 +106,7 @@ public class DownloadManager {
     }
 
     /**
-     * 
      * 添加下载任务
-     * 
      */
 
     public void add(String url, DownloadListner l) {
@@ -130,9 +116,7 @@ public class DownloadManager {
     }
 
     /**
-     * 
      * 添加下载任务
-     * 
      */
 
     public void add(String url, String filePath, DownloadListner l) {
@@ -142,9 +126,7 @@ public class DownloadManager {
     }
 
     /**
-     * 
      * 添加下载任务
-     * 
      */
 
     public void add(String url, String filePath, String fileName, DownloadListner l) {
@@ -166,13 +148,9 @@ public class DownloadManager {
     }
 
     /**
-     * 
      * 获取默认下载目录
-     * 
-     * 
-     * 
+     *
      * @return
-     * 
      */
 
     private String getDefaultDirectory() {
@@ -190,13 +168,10 @@ public class DownloadManager {
     }
 
     /**
-     * 
      * 是否正在下载
-     * 
+     *
      * @param urls
-     * 
      * @return boolean
-     * 
      */
 
     public boolean isDownloading(String... urls) {
@@ -240,9 +215,7 @@ public class DownloadManager {
     }
 
     /**
-     * 
      * 初始化下载管理器
-     * 
      */
 
     private DownloadManager() {

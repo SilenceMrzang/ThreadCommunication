@@ -5,21 +5,15 @@ import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 import okhttp3.Call;
-
 import okhttp3.Callback;
-
 import okhttp3.OkHttpClient;
-
 import okhttp3.Request;
-
 import okhttp3.Response;
 
 /**
- * 
  * Http网络工具,基于OkHttp
- * 
+ * <p>
  * Created by Cheny on 2017/05/03.
- * 
  */
 
 public class HttpUtil {
@@ -35,17 +29,11 @@ public class HttpUtil {
     private final static long WRITE_TIMEOUT = 60;// 写入时间，秒
 
     /**
-     * 
      * @param url        下载链接
-     * 
      * @param startIndex 下载起始位置
-     * 
      * @param endIndex   结束为止
-     * 
      * @param callback   回调
-     * 
      * @throws IOException
-     * 
      */
 
     public void downloadFileByRange(String url, long startIndex, long endIndex, Callback callback) throws IOException {
@@ -79,9 +67,7 @@ public class HttpUtil {
     }
 
     /**
-     * 
      * 同步GET请求
-     * 
      */
 
     public void doGetSync(String url) throws IOException {
@@ -99,9 +85,7 @@ public class HttpUtil {
     }
 
     /**
-     * 
      * 异步请求
-     * 
      */
 
     private void doAsync(Request request, Callback callback) throws IOException {
@@ -117,9 +101,7 @@ public class HttpUtil {
     }
 
     /**
-     * 
      * 同步请求
-     * 
      */
 
     private Response doSync(Request request) throws IOException {
@@ -135,9 +117,7 @@ public class HttpUtil {
     }
 
     /**
-     * 
      * @return HttpUtil实例对象
-     * 
      */
 
     public static HttpUtil getInstance() {
@@ -161,9 +141,7 @@ public class HttpUtil {
     }
 
     /**
-     * 
      * 构造方法,配置OkHttpClient
-     * 
      */
 
     private HttpUtil() {
